@@ -1,0 +1,12 @@
+public class MyClass {
+
+    public static void main(String arg[])
+    {
+        Car car = new Car("aCar", "GenericCarModel", 4, 4);
+        Truck truck = new Truck("aTruck", "GenericTruckModel", 6, 200);
+
+        car.PrintInfo();
+        System.out.println();
+        truck.PrintInfo();
+    }
+}
