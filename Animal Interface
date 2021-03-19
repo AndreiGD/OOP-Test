@@ -1,0 +1,10 @@
+public interface IAnimal
+{
+
+    public abstract void Sleep();
+
+    public abstract void Walk();
+
+    public abstract void Eat();
+
+}
