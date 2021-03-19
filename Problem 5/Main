@@ -1,0 +1,14 @@
+public class MyClass {
+
+    public static void main(String arg[])
+    {
+        Sparrow sparrow = new Sparrow();
+
+        sparrow.name = "Jack Sparrow";
+
+        sparrow.Eat();
+        sparrow.Sleep();
+        sparrow.Walk();
+        sparrow.Fly();
+    }
+}
