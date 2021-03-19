@@ -1,0 +1,6 @@
+public interface IBird extends IAnimal
+{
+
+    public abstract void Fly();
+
+}
