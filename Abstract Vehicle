@@ -1,0 +1,7 @@
+public abstract class Vehicle {
+
+    public String brand, model;
+    public int wheels;
+
+    public abstract void PrintInfo();
+}
