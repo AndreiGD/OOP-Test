@@ -9,6 +9,10 @@ public class Car extends Vehicle
         wheels = _wheels;
         doors = _doors;
     }
+    
+    public int GetDoors() { return doors; }
+
+    public void SetDoors(int value) { doors = value; }
 
     @Override
     public void PrintInfo()
