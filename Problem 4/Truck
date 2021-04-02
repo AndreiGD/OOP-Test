@@ -1,6 +1,6 @@
 public class Truck extends Vehicle
 {
-    public int weightLimit;
+    private int weightLimit;
 
     public Truck(String _brand, String _model, int _wheels, int _weightLimit)
     {
@@ -9,6 +9,10 @@ public class Truck extends Vehicle
         wheels = _wheels;
         weightLimit = _weightLimit;
     }
+    
+    public int GetWeightLimit() { return weightLimit; }
+
+    public void SetWeightLimit(int value) { weightLimit = value; }
 
     @Override
     public void PrintInfo()
