@@ -1,0 +1,28 @@
+public class WebPacket extends Packet implements Comparable<WebPacket>
+{
+    public String senderIP, receiverIP;
+
+    public WebPacket(String senderIP, String receiverIP, int number, String data) {
+        this.senderIP = senderIP;
+        this.receiverIP = receiverIP;
+        this.number = number;
+        this.data = data;
+    }
+
+    @Override
+    public void PrintData()
+    {
+        System.out.println("Packet Number: " + number);
+        System.out.println("Packet Data: " + data);
+        System.out.println("Packet Sender IP: " + senderIP);
+        System.out.println("Packet Receiver IP: " + receiverIP);
+    }
+
+    @Override
+    public int compareTo(WebPacket packet)
+    {
+        if (this.number > packet.number) return 1;
+
+        return 0;
+    }
+}
