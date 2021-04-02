@@ -1,0 +1,7 @@
+public abstract class Packet {
+
+    public int number;
+    public String data;
+
+    public abstract void PrintData();
+}
