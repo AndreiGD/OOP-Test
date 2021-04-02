@@ -1,0 +1,58 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class MyClass {
+
+    public static void bubbleSort(ArrayList<WebPacket> packets)
+    {
+        for (int i = 0; i < packets.size()-1; i++)
+            for (int j = 0; j < packets.size()-i-1; j++)
+                if (packets.get(j).compareTo(packets.get(j+1)) == 1)
+                {
+                    // swap arr[j+1] and arr[j]
+                    WebPacket temp = packets.get(j);
+                    packets.set(j, packets.get(j+1));
+                    packets.set(j+1, temp);
+                }
+    }
+
+
+    public static void main(String arg[])
+    {
+        WebPacket packet1 = new WebPacket("127.0.0.1", "0.0.0.0", 3, "How");
+        WebPacket packet2 = new WebPacket("127.0.0.1", "0.0.0.0", 5, "Are");
+        WebPacket packet3 = new WebPacket("212.134.90.18", "0.0.0.0", 1, "Hello");
+        WebPacket packet4 = new WebPacket("127.0.0.1", "0.0.0.0", 4, "You?");
+        WebPacket packet5 = new WebPacket("212.134.90.18", "0.0.0.0", 2, "There");
+
+        ArrayList<WebPacket> packets = new ArrayList<>();
+
+        packets.add(packet1);
+        packets.add(packet2);
+        packets.add(packet3);
+        packets.add(packet4);
+        packets.add(packet5);
+
+        for (int i = 0; i < packets.size(); i++)
+        {
+            System.out.println(packets.get(i).number + " " + packets.get(i).data);
+        }
+
+        bubbleSort(packets);
+
+        System.out.println();
+
+        for (int i = 0; i < packets.size(); i++)
+        {
+            System.out.println(packets.get(i).number + " " + packets.get(i).data);
+        }
+
+        System.out.println();
+
+        for (int i = 0; i < packets.size(); i++)
+        {
+            if (packets.get(i).senderIP != "212.134.90.18") continue;
+            System.out.println(packets.get(i).data);
+        }
+    }
+}
